@@ -1,0 +1,119 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // =========================================================================
+    // Funções Utilitárias de Autenticação e Autorização
+    // =========================================================================
+
+    // Verifica se o usuário atual está autenticado no Firebase Authentication
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    // Verifica se o usuário autenticado corresponde ao UID solicitado
+    function isUser(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    // Obtém os dados do documento do estabelecimento correspondente
+    function getEstabelecimento(estabId) {
+      return get(/databases/$(database)/documents/estabelecimentos/$(estabId)).data;
+    }
+
+    // Verifica se o usuário autenticado é o proprietário do estabelecimento
+    function isEstabelecimentoOwner(estabId) {
+      return isAuthenticated() && getEstabelecimento(estabId).proprietarioId == request.auth.uid;
+    }
+
+    // =========================================================================
+    // 1. Coleção 'usuarios'
+    // Campos: nome, telefone?, fotoUrl?, tipoPerfil ('cliente'|'estabelecimento'),
+    //         criadoEm, atualizadoEm
+    // Regra: cada usuário autenticado acessa, cria, consulta e atualiza apenas
+    //        seu próprio documento (request.auth.uid == usuarioId).
+    // =========================================================================
+    match /usuarios/{usuarioId} {
+      allow read, get, list: if isUser(usuarioId);
+      allow create, update: if isUser(usuarioId);
+      allow delete: if isUser(usuarioId);
+    }
+
+    // =========================================================================
+    // 2. Coleção 'estabelecimentos'
+    // Campos: proprietarioId, nome, descricao, categoria, telefoneComercial,
+    //         endereco (map), localizacao (GeoPoint), geohash, fotoUrl?,
+    //         publicado (boolean), criadoEm, atualizadoEm
+    // Regra: leitura pública somente quando publicado == true.
+    //        O proprietário autenticado pode consultar seus próprios não publicados.
+    //        Criação e edição permitidas apenas pelo proprietário do negócio.
+    // =========================================================================
+    match /estabelecimentos/{estabelecimentoId} {
+      allow read: if resource.data.publicado == true ||
+                     (isAuthenticated() && resource.data.proprietarioId == request.auth.uid);
+      allow create: if isAuthenticated() && request.resource.data.proprietarioId == request.auth.uid;
+      allow update, delete: if isAuthenticated() && resource.data.proprietarioId == request.auth.uid;
+    }
+
+    // =========================================================================
+    // 3. Coleção 'servicos'
+    // Campos: estabelecimentoId, nome, descricao, categoria, duracaoMinutos,
+    //         precoPadraoCentavos, fotoUrl?, ativo (boolean), criadoEm, atualizadoEm
+    // Regra: leitura pública apenas de serviços ativos (ativo == true) de
+    //        estabelecimentos publicados (publicado == true).
+    //        O proprietário pode consultar todos os seus serviços (inclusive inativos).
+    //        Criação e alteração exclusivas do proprietário do estabelecimento.
+    // =========================================================================
+    match /servicos/{servicoId} {
+      allow read: if (resource.data.ativo == true && getEstabelecimento(resource.data.estabelecimentoId).publicado == true) ||
+                     isEstabelecimentoOwner(resource.data.estabelecimentoId);
+      allow create: if isAuthenticated() && isEstabelecimentoOwner(request.resource.data.estabelecimentoId);
+      allow update, delete: if isAuthenticated() && isEstabelecimentoOwner(resource.data.estabelecimentoId);
+    }
+
+    // =========================================================================
+    // 4. Coleção 'horarios'
+    // Campos: estabelecimentoId, servicoId, profissionalNome?, inicio, fim,
+    //         precoOriginalCentavos, precoOfertaCentavos, status ('disponivel'|
+    //         'reservado'|'concluido'|'cancelado'|'expirado'), criadoEm, atualizadoEm
+    // Regra: leitura pública apenas dos horários com status 'disponivel' de
+    //        estabelecimentos publicados.
+    //        O proprietário pode consultar todos os horários do seu estabelecimento.
+    //        Criação/edição pelo proprietário; cliente pode reservar (alterar para 'reservado').
+    // =========================================================================
+    match /horarios/{horarioId} {
+      allow read: if (resource.data.status == 'disponivel' && getEstabelecimento(resource.data.estabelecimentoId).publicado == true) ||
+                     isEstabelecimentoOwner(resource.data.estabelecimentoId);
+      allow create: if isAuthenticated() && isEstabelecimentoOwner(request.resource.data.estabelecimentoId);
+      allow update: if (isAuthenticated() && isEstabelecimentoOwner(resource.data.estabelecimentoId)) ||
+                      (isAuthenticated() && resource.data.status == 'disponivel' && request.resource.data.status == 'reservado');
+      allow delete: if isAuthenticated() && isEstabelecimentoOwner(resource.data.estabelecimentoId);
+    }
+
+    // =========================================================================
+    // 5. Coleção 'reservas'
+    // Campos: clienteId, proprietarioId, estabelecimentoId, servicoId, horarioId,
+    //         clienteNome, estabelecimentoNome, servicoNome, inicio, fim,
+    //         precoConfirmadoCentavos, status ('confirmada'|'cancelada'|'concluida'),
+    //         criadoEm, atualizadoEm, canceladoEm?, canceladoPorId?
+    // Regra: leitura SOMENTE pelo cliente (clienteId) ou pelo proprietário
+    //        (proprietarioId). Nenhum outro usuário pode consultar.
+    //        Criação pelo cliente autenticado; atualização pelos participantes.
+    // =========================================================================
+    match /reservas/{reservaId} {
+      allow read: if isAuthenticated() && (
+        resource.data.clienteId == request.auth.uid ||
+        resource.data.proprietarioId == request.auth.uid
+      );
+      allow create: if isAuthenticated() && request.resource.data.clienteId == request.auth.uid;
+      allow update: if isAuthenticated() && (
+        resource.data.clienteId == request.auth.uid ||
+        resource.data.proprietarioId == request.auth.uid
+      );
+      allow delete: if isAuthenticated() && (
+        resource.data.clienteId == request.auth.uid ||
+        resource.data.proprietarioId == request.auth.uid
+      );
+    }
+  }
+}

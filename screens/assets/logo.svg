@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 40" width="160" height="40" fill="none">
+  <g transform="translate(4, 6)">
+    <circle cx="14" cy="14" r="13" stroke="#0F766E" stroke-width="2.5" fill="#F0FDFA"/>
+    <circle cx="14" cy="14" r="3" fill="#10B981"/>
+    <path d="M14 6V14L19 19" stroke="#0F766E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M22 6L25 3" stroke="#10B981" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  <text x="44" y="27" font-family="'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-size="21" font-weight="700" fill="#1C1C1C" letter-spacing="-0.5px">lastminute</text>
+  <circle cx="148" cy="25" r="3" fill="#10B981"/>
+</svg>

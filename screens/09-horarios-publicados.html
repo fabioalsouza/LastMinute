@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"tertiary-fixed":"#ffddb8","background":"#fcf9f8","surface-tint":"#006a63","on-background":"#1b1b1b","error-container":"#ffdad6","secondary":"#006c49","secondary-container":"#6cf8bb","on-tertiary-container":"#ffe6cc","on-surface":"#1b1b1b","primary-fixed":"#9cf2e8","secondary-fixed":"#6ffbbe","on-tertiary-fixed":"#2a1700","on-tertiary":"#ffffff","tertiary-container":"#945d00","tertiary":"#734700","inverse-surface":"#313030","surface-variant":"#e5e2e1","surface":"#fcf9f8","on-secondary-container":"#00714d","primary-fixed-dim":"#80d5cb","primary":"#005c55","surface-container-lowest":"#ffffff","surface-container-low":"#f6f3f2","surface-container-high":"#eae7e7","inverse-primary":"#80d5cb","surface-container":"#f0eded","tertiary-fixed-dim":"#ffb95f","surface-dim":"#dcd9d9","on-surface-variant":"#3e4947","surface-container-highest":"#e5e2e1","on-tertiary-fixed-variant":"#653e00","on-secondary-fixed":"#002113","on-error":"#ffffff","on-secondary":"#ffffff","outline":"#6e7977","surface-bright":"#fcf9f8","on-error-container":"#93000a","on-primary-fixed-variant":"#00504a","on-primary-fixed":"#00201d","inverse-on-surface":"#f3f0ef","primary-container":"#0f766e","error":"#ba1a1a","on-primary":"#ffffff","on-primary-container":"#a3faef","outline-variant":"#bdc9c6","on-secondary-fixed-variant":"#005236","secondary-fixed-dim":"#4edea3"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin-mobile":"1.25rem","space-lg":"1.5rem","space-xl":"2.5rem","gutter-mobile":"1rem","space-xs":"0.25rem","space-md":"1rem","margin":"3rem","space-sm":"0.5rem","gutter":"1.5rem"},"fontFamily":{"display-hero":["Inter"],"headline-md":["Inter"],"body-lg":["Inter"],"caption-sm":["Inter"],"title-md":["Inter"],"label-md":["Inter"],"display-hero-mobile":["Inter"],"headline-lg-mobile":["Inter"],"headline-sm":["Inter"],"label-lg":["Inter"],"body-md":["Inter"],"headline-lg":["Inter"]},"fontSize":{"display-hero":["40px",{"lineHeight":"48px","letterSpacing":"-0.025em","fontWeight":"600"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"caption-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"500"}],"title-md":["18px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"500"}],"label-md":["13px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"500"}],"display-hero-mobile":["30px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-sm":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"600"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-fixed selection:text-on-primary-fixed"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-md border-b border-surface-variant"><div class="h-[72px] max-w-[1440px] mx-auto px-gutter flex items-center justify-between"><div class="flex items-center gap-space-md"><a class="flex items-center gap-space-sm" data-path="visao-geral" href="#"><img alt="lastminute logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VoE5xFzfjhAagunEsstNbQ6bldefGJ02poFCG58R_gKedI2fp2_YLmRjgQp9CPQjAa-9i3OQRSiT7EKXlyPfc1osBywg_M30pOyelZy_7dKqgf7RFVxI6we_o4ljrbKuOtIn4AhMdBSeTvV8DKTQRg7ih9I2aSSHYLBLHwvcIxccEJG7s2SuZxBzbEOWMSdrqwpoKjvS_6W2IhEZw3yZQcebVCDDYAieEATsNIrjSmAaDmXiaZT0kCSvmm"/><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface lowercase">lastminute</span></a><span class="px-2 py-0.5 rounded-full bg-primary/10 text-primary font-caption-sm text-caption-sm tracking-normal">Para Negócios</span></div><nav class="flex items-center gap-space-lg" data-active-classes="text-primary font-label-lg font-semibold border-b-2 border-primary"><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors py-2" data-path="visao-geral" href="#">Visão geral</a><a aria-current="page" class="transition-colors py-2 text-primary font-label-lg font-semibold border-b-2 border-primary" data-path="horarios" href="#">Horários</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors py-2" data-path="servicos" href="#">Serviços</a></nav><div class="flex items-center gap-space-md"><a class="inline-flex items-center justify-center h-10 px-space-md rounded-full bg-surface-container-low border border-outline-variant font-label-md text-label-md text-on-surface hover:bg-surface-container-high transition-colors" data-path="explorar" href="#">Visão do cliente</a><div class="flex items-center gap-space-sm border-l border-surface-variant pl-space-md"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEjT39AYUUAZTiV1XAeRBRGWbIwLo_eerCsE3S6QrW08utRKjx9rz8JwIxhdbfiIV1oAFS5gYBfKqvtWPH8Ho_iwsroGD5NhUKQyW0YWNW2WClDKWCkMc1C5jgBtaqQupSVJRM0_NsthpnumlW2GWfrbtjaXJNGH294gtMZyjwURnOARzUrzq4Xh0Hyu-fxgw_-JbWW0VUWhcAqeLEoOVr-NfuyUsad-zpX6_CVQxoLgI-5ec5z-OBDQ"/><div class="flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface leading-tight">Barbearia Distrito</span><div class="flex items-center gap-0.5 text-on-surface-variant"><span class="material-symbols-outlined text-[13px]">location_on</span><span class="font-caption-sm text-caption-sm">Jardins, SP</span></div></div></div></div></div></header><main class="w-full pt-[72px] bg-surface min-h-[calc(100vh-72px)]"><div class="flex flex-col w-full">
+<div class="w-full max-w-[1440px] mx-auto px-gutter py-space-xl">
+<!-- Toast Integrado de Sucesso -->
+<div class="relative w-full rounded-xl bg-secondary-container/30 px-space-md py-3.5 mb-space-lg flex items-center justify-between shadow-sm animate-fade-in" id="toastSuccess">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-secondary text-on-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2">
+<span class="font-label-lg text-label-lg text-on-secondary-container">Horário publicado com sucesso!</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Sua vaga para <strong>Corte masculino</strong> às <strong>15:30</strong> já está ativa no mapa para clientes nos Jardins.</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="hidden md:inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-container text-secondary font-caption-sm text-caption-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+          Ao vivo nos Jardins
+        </span>
+<button class="p-1 rounded-lg text-on-surface-variant hover:bg-surface-variant/50 transition-colors" onclick="document.getElementById('toastSuccess').classList.add('hidden')">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+</div>
+<!-- Cabeçalho da Página & Barra de Ações -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg pb-space-lg">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-3">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Horários Publicados</h1>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-caption-sm text-caption-sm">6 no total</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Gerencie as vagas disponibilizadas no app e acompanhe o preenchimento em tempo real.</p>
+</div>
+<div class="flex items-center gap-3 shrink-0">
+<!-- Seletor de Data -->
+<div class="relative inline-flex items-center">
+<button class="inline-flex items-center gap-2 h-12 px-4 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors text-on-surface font-label-md text-label-md">
+<span class="material-symbols-outlined text-primary text-[20px]">calendar_today</span>
+<span>Hoje, 24 de Outubro</span>
+<span class="material-symbols-outlined text-outline text-[18px]">expand_more</span>
+</button>
+</div>
+<!-- Botão Primário Destacado -->
+<a class="inline-flex items-center gap-2 h-12 px-6 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg shadow-md hover:bg-primary-container transition-all" data-path="publicar-horario" href="#">
+<span class="material-symbols-outlined text-[20px]">add</span>
+<span>Publicar novo horário</span>
+</a>
+</div>
+</div>
+<!-- Métricas Rápidas de Ocupação Instantânea -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-space-lg">
+<div class="p-4 rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-caption-sm text-caption-sm text-outline">Vagas Ativas Hoje</span>
+<span class="font-headline-md text-headline-md text-on-surface">5</span>
+</div>
+<div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined">schedule</span>
+</div>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-caption-sm text-caption-sm text-outline">Taxa de Conversão</span>
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-md text-headline-md text-secondary">60%</span>
+<span class="font-caption-sm text-caption-sm text-secondary font-semibold">3 ocupadas</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined">how_to_reg</span>
+</div>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-caption-sm text-caption-sm text-outline">Receita Salva (Hoje)</span>
+<span class="font-headline-md text-headline-md text-on-surface">R$ 227,00</span>
+</div>
+<div class="w-10 h-10 rounded-xl bg-tertiary-fixed-dim/30 text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined">payments</span>
+</div>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-caption-sm text-caption-sm text-outline">Visualizações no Raio Jardins</span>
+<div class="flex items-center gap-1.5">
+<span class="font-headline-md text-headline-md text-on-surface">148</span>
+<span class="font-caption-sm text-caption-sm text-secondary flex items-center">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>+18%
+            </span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-xl bg-surface-variant text-on-surface flex items-center justify-center">
+<span class="material-symbols-outlined">visibility</span>
+</div>
+</div>
+</div>
+<!-- Segmentação e Filtros de Status -->
+<div class="flex flex-wrap items-center justify-between gap-4 mb-space-md">
+<div class="flex items-center gap-2 p-1 bg-surface-container-high rounded-xl">
+<button class="filter-tab px-4 py-2 rounded-lg font-label-md text-label-md bg-surface-container-lowest text-primary shadow-sm font-semibold transition-all" onclick="filterTable('all', this)">
+          Todos (6)
+        </button>
+<button class="filter-tab px-4 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" onclick="filterTable('available', this)">
+          Disponíveis (2)
+        </button>
+<button class="filter-tab px-4 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" onclick="filterTable('reserved', this)">
+          Reservados (3)
+        </button>
+<button class="filter-tab px-4 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" onclick="filterTable('closed', this)">
+          Encerrados (1)
+        </button>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-caption-sm text-caption-sm bg-surface-container-low px-3 py-1.5 rounded-lg">
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+<span>Atualização em tempo real (websocket ativo)</span>
+</div>
+</div>
+</div>
+<!-- Tabela Completa de Horários -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-md text-label-md">
+<th class="py-4 px-6 font-semibold">Serviço</th>
+<th class="py-4 px-6 font-semibold">Data & Horário</th>
+<th class="py-4 px-4 font-semibold">Duração</th>
+<th class="py-4 px-6 font-semibold">Preço Atual</th>
+<th class="py-4 px-6 font-semibold">Desconto Automático</th>
+<th class="py-4 px-6 font-semibold">Status</th>
+<th class="py-4 px-6 text-right font-semibold">Ações</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-variant/40 font-body-md text-body-md">
+<!-- Linha 1: Recém-publicado (Disponível com automação ativa) -->
+<tr class="table-row-item hover:bg-surface-container-low/50 transition-colors group" data-status="available">
+<td class="py-5 px-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-primary-fixed-dim/20 text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">content_cut</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Corte masculino</span>
+<span class="font-caption-sm text-caption-sm text-outline">Cadeira 01 • Alex Brandão</span>
+</div>
+</div>
+</td>
+<td class="py-5 px-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">schedule</span>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Hoje, 15:30</span>
+<span class="font-caption-sm text-caption-sm text-secondary font-medium">Inicia em 1h 10m</span>
+</div>
+</div>
+</td>
+<td class="py-5 px-4 text-on-surface-variant">45 min</td>
+<td class="py-5 px-6">
+<div class="flex flex-col">
+<div class="flex items-baseline gap-1.5">
+<span class="font-title-md text-title-md text-on-surface font-semibold">R$ 49,00</span>
+<span class="font-caption-sm text-caption-sm text-outline line-through">R$ 80,00</span>
+</div>
+<span class="font-caption-sm text-caption-sm text-secondary font-medium">-39% no app</span>
+</div>
+</td>
+<td class="py-5 px-6">
+<div class="flex items-center gap-2">
+<div class="p-1 rounded-md bg-secondary/10 text-secondary">
+<span class="material-symbols-outlined text-[16px]">trending_down</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-medium">Ativo</span>
+<span class="font-caption-sm text-caption-sm text-outline">Próx. degrau: R$ 43 às 14:30</span>
+</div>
+</div>
+</td>
+<td class="py-5 px-6">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-secondary font-caption-sm text-caption-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+                  Disponível
+                </span>
+</td>
+<td class="py-5 px-6 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="px-3 py-1.5 rounded-lg text-on-surface hover:bg-surface-container font-label-md text-label-md transition-colors" onclick="openSlotDetail('Corte masculino', 'Hoje, 15:30', 'Alex Brandão', 'R$ 49,00')">
+                    Ver detalhes
+                  </button>
+<button class="px-3 py-1.5 rounded-lg text-error hover:bg-error-container/30 font-label-md text-label-md transition-colors" onclick="openRetirarModal('Corte masculino', 'Hoje, 15:30')">
+                    Retirar horário
+                  </button>
+</div>
+</td>
+</tr>
+<!-- Linha 2: Reservado pelo Lucas Ribeiro -->
+<tr class="table-row-item hover:bg-surface-container-low/50 transition-colors bg-primary/5" data-status="reserved">
+<td class="py-5 px-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">content_cut</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Corte masculino</span>
+<span class="font-caption-sm text-caption-sm text-outline">Cadeira 02 • Matheus Silva</span>
+</div>
+</div>
+</td>
+<td class="py-5 px-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">schedule</span>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Hoje, 15:30</span>
+<span class="font-caption-sm text-caption-sm text-primary font-medium">Cliente a caminho</span>
+</div>
+</div>
+</td>
+<td class="py-5 px-4 text-on-surface-variant">45 min</td>
+<td class="py-5 px-6">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-semibold">R$ 49,00</span>
+<span class="font-caption-sm text-caption-sm text-secondary font-medium">Pago antecipado</span>
+</div>
+</td>
+<td class="py-5 px-6">
+<span class="text-outline font-body-md text-body-md">-</span>
+</td>
+<td class="py-5 px-6">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/15 text-primary font-caption-sm text-caption-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+                  Reservado (Lucas R.)
+                </span>
+</td>
+<td class="py-5 px-6 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="px-4 py-1.5 rounded-lg bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md transition-all shadow-sm flex items-center gap-1.5" onclick="openBookingModal('Lucas Ribeiro', '(11) 98412-4402', 'Corte masculino', 'Hoje, 15:30', 'LM-2048', 'R$ 49,00', 'Matheus Silva')">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+                    Ver reserva
+                  </button>
+</div>
+</td>
+</tr>
+<!-- Linha 3: Reservado Rodrigo P. -->
+<tr class="table-row-item hover:bg-surface-container-low/50 transition-colors" data-status="reserved">
+<td class="py-5 px-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high text-on-surface flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">face</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Corte + Barba</span>
+<span class="font-caption-sm text-caption-sm text-outline">Cadeira 01 • Alex Brandão</span>
+</div>
+</div>
+</td>
+<td class="py-5 px-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-outline">schedule</span>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Hoje, 16:30</span>
+<span class="font-caption-sm text-caption-sm text-outline">Inicia em 2h 10m</span>
+</div>
+</div>
+</td>
+<td class="py-5 px-4 text-on-surface-variant">75 min</td>
+<td class="py-5 px-6">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-semibold">R$ 89,00</span>
+<span class="font-caption-sm text-caption-sm text-outline">Original R$ 130,00</span>
+</div>
+</td>
+<td class="py-5 px-6">
+<span class="text-outline font-body-md text-body-md">-</span>
+</td>
+<td class="py-5 px-6">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/15 text-primary font-caption-sm text-caption-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+                  Reservado (Rodrigo P.)
+                </span>
+</td>
+<td class="py-5 px-6 text-right">
+<button class="px-3.5 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high font-label-md text-label-md text-on-surface transition-colors" onclick="openBookingModal('Rodrigo Prado', '(11) 97133-8901', 'Corte + Barba', 'Hoje, 16:30', 'LM-2041', 'R$ 89,00', 'Alex Brandão')">
+                  Ver reserva
+                </button>
+</td>
+</tr>
+<!-- Linha 4: Disponível Barba Tradicional -->
+<tr class="table-row-item hover:bg-surface-container-low/50 transition-colors" data-status="available">
+<td class="py-5 px-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-secondary-fixed/30 text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">cleaning_services</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Barba tradicional</span>
+<span class="font-caption-sm text-caption-sm text-outline">Cadeira 03 • Danilo Rios</span>
+</div>
+</div>
+</td>
+<td class="py-5 px-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-outline">schedule</span>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Hoje, 17:30</span>
+<span class="font-caption-sm text-caption-sm text-outline">Inicia em 3h 10m</span>
+</div>
+</div>
+</td>
+<td class="py-5 px-4 text-on-surface-variant">30 min</td>
+<td class="py-5 px-6">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-semibold">R$ 39,00</span>
+<span class="font-caption-sm text-caption-sm text-outline line-through">R$ 55,00</span>
+</div>
+</td>
+<td class="py-5 px-6">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-caption-sm text-caption-sm">
+<span class="material-symbols-outlined text-[16px] text-outline">check_circle</span>
+<span>Fixo (-29%)</span>
+</div>
+</td>
+<td class="py-5 px-6">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-secondary font-caption-sm text-caption-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+                  Disponível
+                </span>
+</td>
+<td class="py-5 px-6 text-right">
+<button class="px-3 py-1.5 rounded-lg text-error hover:bg-error-container/30 font-label-md text-label-md transition-colors" onclick="openRetirarModal('Barba tradicional', 'Hoje, 17:30')">
+                  Retirar
+                </button>
+</td>
+</tr>
+<!-- Linha 5: Encerrado (Concluído) -->
+<tr class="table-row-item hover:bg-surface-container-low/50 transition-colors opacity-75" data-status="closed">
+<td class="py-5 px-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high text-outline flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">done_all</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Corte masculino</span>
+<span class="font-caption-sm text-caption-sm text-outline">Cadeira 02 • Matheus Silva</span>
+</div>
+</div>
+</td>
+<td class="py-5 px-6">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Hoje, 13:00</span>
+<span class="font-caption-sm text-caption-sm text-outline">Finalizado às 13:42</span>
+</div>
+</td>
+<td class="py-5 px-4 text-on-surface-variant">45 min</td>
+<td class="py-5 px-6">
+<span class="font-title-md text-title-md text-on-surface font-semibold">R$ 49,00</span>
+</td>
+<td class="py-5 px-6">
+<span class="text-outline font-body-md text-body-md">-</span>
+</td>
+<td class="py-5 px-6">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-caption-sm text-caption-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">task_alt</span>
+                  Encerrado (Concluído)
+                </span>
+</td>
+<td class="py-5 px-6 text-right">
+<button class="px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-md text-label-md transition-colors" onclick="alert('Relatório do atendimento #LM-2019 gerado com sucesso.')">
+                  Ver relatório
+                </button>
+</td>
+</tr>
+<!-- Linha 6: Retirado -->
+<tr class="table-row-item hover:bg-surface-container-low/50 transition-colors opacity-75" data-status="closed">
+<td class="py-5 px-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high text-outline flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">spa</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Tratamento capilar</span>
+<span class="font-caption-sm text-caption-sm text-outline">Cadeira 01 • Alex Brandão</span>
+</div>
+</div>
+</td>
+<td class="py-5 px-6">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Ontem, 18:00</span>
+<span class="font-caption-sm text-caption-sm text-outline">Removido pelo gestor</span>
+</div>
+</td>
+<td class="py-5 px-4 text-on-surface-variant">40 min</td>
+<td class="py-5 px-6">
+<span class="font-title-md text-title-md text-on-surface font-semibold">R$ 60,00</span>
+</td>
+<td class="py-5 px-6">
+<span class="text-outline font-body-md text-body-md">-</span>
+</td>
+<td class="py-5 px-6">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-error-container/40 text-error font-caption-sm text-caption-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">block</span>
+                  Retirado
+                </span>
+</td>
+<td class="py-5 px-6 text-right">
+<button class="px-3.5 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high font-label-md text-label-md text-primary font-semibold transition-colors" onclick="alert('Horário reativado e publicado novamente na plataforma!')">
+                  Reativar
+                </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Rodapé da Tabela: Paginação / Sumário -->
+<div class="px-6 py-4 bg-surface-container-low/60 flex flex-col sm:flex-row items-center justify-between gap-4">
+<span class="font-caption-sm text-caption-sm text-outline">
+          Mostrando <strong>6</strong> de <strong>6</strong> horários programados
+        </span>
+<div class="flex items-center gap-2">
+<span class="font-caption-sm text-caption-sm text-outline mr-2">Vagas reservadas não podem ser canceladas por aqui para manter o compromisso com o cliente.</span>
+<a class="font-label-md text-label-md text-primary hover:underline" href="#">Políticas lastminute</a>
+</div>
+</div>
+</div>
+<!-- Banner Concierge Operacional -->
+<div class="mt-space-lg rounded-xl bg-gradient-to-r from-surface-container to-surface-container-low p-6 flex flex-col md:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-primary text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">electric_bolt</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Algoritmo de Preenchimento Dinâmico Ativo</span>
+<p class="font-body-md text-body-md text-on-surface-variant">Quando faltam menos de 60 minutos para a vaga, o Lastminute aumenta a visibilidade no mapa em até 3x para clientes em um raio de 2km.</p>
+</div>
+</div>
+<button class="px-4 py-2 rounded-xl bg-surface-container-lowest text-on-surface font-label-md text-label-md hover:bg-surface-variant transition-colors shrink-0">
+        Ajustar regras de automação
+      </button>
+</div>
+</div>
+<!-- MODAL: DETALHES DA RESERVA (Lucas Ribeiro & outros) -->
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-inverse-surface/40 backdrop-blur-sm hidden animate-fade-in" id="bookingModal">
+<div class="bg-surface-container-lowest rounded-2xl w-full max-w-[540px] p-6 shadow-2xl relative mx-4">
+<!-- Cabeçalho Modal -->
+<div class="flex items-center justify-between pb-4">
+<div class="flex items-center gap-2.5">
+<span class="px-2.5 py-1 rounded-md bg-primary/10 text-primary font-caption-sm text-caption-sm font-semibold tracking-wider uppercase">
+            Reserva Garantida
+          </span>
+<span class="font-label-md text-label-md text-outline" id="modalCode">LM-2048</span>
+</div>
+<button class="w-8 h-8 rounded-full hover:bg-surface-container flex items-center justify-center text-on-surface-variant transition-colors" onclick="closeBookingModal()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Perfil do Cliente -->
+<div class="p-4 rounded-xl bg-surface-container-low flex items-center justify-between my-2">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-title-md text-title-md font-semibold shrink-0">
+            LR
+          </div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface font-semibold" id="modalClientName">Lucas Ribeiro</span>
+<span class="font-caption-sm text-caption-sm text-outline" id="modalClientPhone">(11) 98412-4402</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-lowest text-secondary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>Cliente Verificado</span>
+</div>
+</div>
+<!-- Detalhes do Agendamento -->
+<div class="py-4 space-y-3 font-body-md text-body-md">
+<div class="flex justify-between py-2">
+<span class="text-outline">Serviço</span>
+<span class="font-medium text-on-surface" id="modalService">Corte masculino</span>
+</div>
+<div class="flex justify-between py-2">
+<span class="text-outline">Horário agendado</span>
+<span class="font-medium text-on-surface" id="modalTime">Hoje, 15:30 (em 1h 10m)</span>
+</div>
+<div class="flex justify-between py-2">
+<span class="text-outline">Profissional responsável</span>
+<span class="font-medium text-on-surface" id="modalStaff">Matheus Silva (Cadeira 02)</span>
+</div>
+<div class="flex justify-between py-2">
+<span class="text-outline">Valor pago no app</span>
+<span class="font-title-md text-title-md font-semibold text-secondary" id="modalPrice">R$ 49,00</span>
+</div>
+</div>
+<!-- Aviso de política de retirada -->
+<div class="p-3.5 rounded-xl bg-surface-container text-on-surface-variant font-caption-sm text-caption-sm flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0">info</span>
+<span><strong>Vagas reservadas não podem ser retiradas.</strong> O pagamento foi processado pela plataforma e a repassagem líquida ocorrerá automaticamente via Pix D+1.</span>
+</div>
+<!-- Ações do Modal -->
+<div class="flex items-center justify-end gap-3 pt-6">
+<button class="px-5 py-2.5 rounded-xl bg-surface-container hover:bg-surface-container-high font-label-md text-label-md text-on-surface transition-colors" onclick="closeBookingModal()">
+          Fechar
+        </button>
+<button class="px-5 py-2.5 rounded-xl bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md transition-colors flex items-center gap-2" onclick="alert('Notificação enviada ao cliente com o check-in rápido!')">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+          Mensagem via app
+        </button>
+</div>
+</div>
+</div>
+<!-- MODAL: CONFIRMAÇÃO DE RETIRADA DE HORÁRIO -->
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-inverse-surface/40 backdrop-blur-sm hidden animate-fade-in" id="retirarModal">
+<div class="bg-surface-container-lowest rounded-2xl w-full max-w-[460px] p-6 shadow-2xl relative mx-4">
+<div class="w-12 h-12 rounded-xl bg-error-container text-error flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-[28px]">event_busy</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-2">Retirar horário disponível?</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">
+        A vaga para <strong class="text-on-surface" id="retirarServiceName">Corte masculino</strong> (<span class="text-on-surface" id="retirarTime">Hoje, 15:30</span>) deixará de aparecer para clientes que estão navegando na região dos Jardins.
+      </p>
+<div class="p-3 rounded-lg bg-surface-container-low text-caption-sm font-caption-sm text-outline mb-6">
+<p>Você poderá reativar ou republicar este horário a qualquer momento antes do início previsto.</p>
+</div>
+<div class="flex items-center justify-end gap-3">
+<button class="px-4 py-2.5 rounded-xl bg-surface-container hover:bg-surface-container-high font-label-md text-label-md text-on-surface transition-colors" onclick="closeRetirarModal()">
+          Cancelar
+        </button>
+<button class="px-5 py-2.5 rounded-xl bg-error text-on-error hover:opacity-90 font-label-md text-label-md transition-all shadow-sm" onclick="confirmarRetirada()">
+          Sim, retirar horário
+        </button>
+</div>
+</div>
+</div>
+<script>
+    // Filtragem de abas
+    function filterTable(status, el) {
+      document.querySelectorAll('.filter-tab').forEach(btn => {
+        btn.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'font-semibold');
+        btn.classList.add('text-on-surface-variant');
+      });
+      el.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'font-semibold');
+      el.classList.remove('text-on-surface-variant');
+
+      const rows = document.querySelectorAll('.table-row-item');
+      rows.forEach(row => {
+        if (status === 'all' || row.dataset.status === status) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
+        }
+      });
+    }
+
+    // Modal Reserva
+    function openBookingModal(name, phone, service, time, code, price, staff) {
+      document.getElementById('modalClientName').textContent = name;
+      document.getElementById('modalClientPhone').textContent = phone;
+      document.getElementById('modalService').textContent = service;
+      document.getElementById('modalTime').textContent = time;
+      document.getElementById('modalCode').textContent = code;
+      document.getElementById('modalPrice').textContent = price;
+      document.getElementById('modalStaff').textContent = staff;
+      document.getElementById('bookingModal').classList.remove('hidden');
+    }
+
+    function closeBookingModal() {
+      document.getElementById('bookingModal').classList.add('hidden');
+    }
+
+    // Modal Retirada
+    let targetSlotRow = null;
+    function openRetirarModal(service, time) {
+      document.getElementById('retirarServiceName').textContent = service;
+      document.getElementById('retirarTime').textContent = time;
+      document.getElementById('retirarModal').classList.remove('hidden');
+    }
+
+    function closeRetirarModal() {
+      document.getElementById('retirarModal').classList.add('hidden');
+    }
+
+    function confirmarRetirada() {
+      closeRetirarModal();
+      alert('O horário foi retirado do mapa dos Jardins.');
+    }
+
+    function openSlotDetail(service, time, staff, price) {
+      alert('Exibindo histórico de tráfego para ' + service + ' (' + time + ') atendido por ' + staff + '. Valor promocional: ' + price);
+    }
+  </script>
+</div></main></body></html>
